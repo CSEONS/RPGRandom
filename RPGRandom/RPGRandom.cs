@@ -4,8 +4,48 @@ using System.Collections.Generic;
 
 namespace RPGRandom
 {
-    public class Randomf
+    public sealed class Randomf
     {
+        public static int Int(int max)
+        {
+            return new Random().Next(max);
+        }
+
+        public static int Int(int max, long seed)
+        {
+            return new Random((int)seed).Next(max);
+        }
+
+        public static int Int(int min, int max)
+        {
+            return new Random().Next(min, max);
+        }
+
+        public static int Int(int min, int max, long seed)
+        {
+            return new Random((int)seed).Next(min, max);
+        }
+
+        public static double Double()
+        {
+            return new Random().NextDouble();
+        }
+
+        public static double Double(long seed)
+        {
+            return new Random((int)seed).NextDouble();
+        }
+
+        public static double Double(double max)
+        {
+            return (new Random().NextDouble()) * max;
+        }
+
+        public static double Double(double max, long seed)
+        {
+            return ((new Random((int)seed)).NextDouble()) * max;
+        }
+
         public static T ChooseOneOf<T>(T[] items)
         {
             T selectedItem;

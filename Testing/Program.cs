@@ -10,10 +10,11 @@ namespace Testing
         {
             Item[] items = new Item[]
             {
-                new Item(10, "Sword")
+                new Item(10, "Sword"),
+                new Item(20, "Shield")
             };
 
-            
+
             Print(items, 1000000);
         }
 
