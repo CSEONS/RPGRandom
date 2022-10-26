@@ -24,7 +24,7 @@ namespace RPGRandom
 
         public double Range(double min, double max)
         {
-            return Math.Round(_random.NextDouble() * (max - min) + min);
+            return _random.NextDouble() * (max - min) + min;
         }
 
         public void SetSeed(int seed)

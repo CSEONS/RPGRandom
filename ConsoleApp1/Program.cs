@@ -13,6 +13,7 @@ class Program
         };
 
         var logMessage = RPGRandomLog.TestChance(persons, 1000000);
+        Console.WriteLine(logMessage);
 
         Console.WriteLine(logMessage);
 
